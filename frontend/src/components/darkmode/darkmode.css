@@ -1,0 +1,7 @@
+.darkMode {
+  position: fixed;
+  right: 20px;
+  top: 105px;
+  z-index: 5;
+}
+

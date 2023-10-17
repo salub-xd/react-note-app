@@ -1,0 +1,227 @@
+.registerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 80vh; */
+}
+
+.registerForm .form button {
+  margin: 15px 0;
+  margin-top: 25px;
+}
+
+.registerForm .form {
+  width: 700px;
+  /* height: 320px; */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(250px - 200px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.registerForm .form h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 160px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+
+/* .form .registerNames {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
+.registerForm .form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid #d9d9d9;
+}
+.registerForm .form input:focus {
+  border-bottom: 2px solid #78788c;
+}
+.registerForm .formInline {
+  display: flex;
+  margin: 20px 0;
+}
+.registerForm .formInline .form-input {
+  margin: 0;
+}
+
+.registerForm .formInline .form-input.password {
+  display: flex;
+  flex-direction: column; /* width: 300px; */
+  width: 290px; /* margin: 20px 0; */
+  margin-right: 10px;
+}
+.registerForm .formInline .form-input.repeatPassword {
+  display: flex;
+  flex-direction: column; /* width: 300px; */
+  width: 290px; /* margin: 20px 0; */
+  margin-left: 10px;
+}
+.registerForm .form-input {
+  padding: 10px;
+  border: 1px solid #a3a3a3;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+.registerForm .form-input p {
+  padding: 5px 0;
+}
+.registerForm .form-input small {
+  color: red;
+}
+.registerForm .form p:before {
+  content: attr(type);
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+.form p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+.registerForm .form .formBox {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+.registerForm .form .formBox .errDisplay {
+  margin: 15px 5px;
+  margin-top: 25px;
+  color: red;
+}
+button.submitBtn {
+  float: right;
+  padding: 8px 12px;
+  margin: 15px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 6px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 106px;
+  height: 42px;
+  margin-bottom: 0;
+}
+.registerForm button.submitBtn:hover {
+  background: #78788c;
+  color: #fff;
+}
+.registerForm .deleteBtn:hover {
+  /* background: #ff0808; */
+  /* border-radius: 5px; */
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 700px) {
+  .registerForm .form .formBox {
+    flex-direction: column;
+    height: 60px;
+  }
+  .registerForm .form .error .formBox {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+  }
+  .registerForm .form .error .errDisplay {
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .registerForm .form button {
+    margin: 15px 0;
+    margin-bottom: 5px;
+  }
+  .registerForm .formInline {
+    display: unset;
+    margin: 0;
+  }
+  .registerForm .form-input {
+    margin: 10px 0;
+  }
+  .registerForm .formInline .form-input {
+    margin: 10px 0;
+  }
+  .registerForm .formInline .form-input.password {
+    display: block;
+    width: unset;
+    margin-right: 0px;
+  }
+  .registerForm .formInline .form-input.repeatPassword {
+    display: block;
+    width: unset;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .registerForm .form .error .errDisplay {
+    margin: 0;
+    margin-top: 15px;
+  }
+  .registerForm .form .formBox button.submitBtn {
+    padding: 4px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 95px;
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .registerForm .form-input small {
+    font-size: 11px;
+  }
+  .loginForm .form input {
+    font-size: 10px;
+  }
+
+  .registerForm .form .formBox button.submitBtn {
+    margin-top: 25px;
+    padding: 2px 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .registerForm .form .error .formBox {
+    height: 85px;
+  }
+  .registerForm .form h2 {
+    padding-bottom: 5px;
+    width: 130px;
+    font-size: 19px;
+  }
+  .registerForm .form .error .errDisplay {
+    width: 60%;
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+}
